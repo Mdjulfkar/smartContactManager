@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org" th:replace="normal/base::Layout(~{::section})">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title> about page</title>
+</head>
+
+<body>
+	<section>
+
+		<div class="card ml-3 mr-3">
+			<div class="card-body">
+				<div>
+					<h2 class="text-center">Add Contact</h2>
+				</div>
+
+				<div class="container mt-1">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+
+
+							<form action="#" th:action="@{/users/process-contact}" th:object="${contact}" method="post"
+								class="mt-2" enctype="multipart/form-data">
+
+
+								<!-- first name -->
+
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<input class="form-control" name="name" type="text" placeholder="first name">
+
+								</div>
+
+
+								<!-- second name name -->
+
+								<div class="input-group mt-2">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<input class="form-control" name="secondName" type="text" placeholder="secondName">
+
+								</div>
+
+								<!-- word name name -->
+
+								<div class="input-group mt-2">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<input class="form-control" name="work" type="text" placeholder="work">
+
+								</div>
+
+								<!-- email name name -->
+
+								<div class="input-group mt-2">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<input class="form-control" name="email" type="email" placeholder="email">
+
+								</div>
+
+								<!-- phone name name -->
+
+								<div class="input-group mt-2">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<input class="form-control" name="phone" type="text" placeholder="phone number">
+
+								</div>
+
+
+								<!-- description field  -->
+
+								<div class="form-group mt-3">
+									<label>description:</label>
+									<textarea name="description" id="mytextarea" class="form-control" rows="6"></textarea>
+								</div>
+
+								<!--  image field -->
+
+								<div class="custom-file">
+									<input type="file" name="profileimage">
+								</div>
+
+								<div class="container text-center">
+									<button class="btn btn-outline-primary">save contact</button>
+								</div>
+
+
+
+
+
+
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+		<script>
+			tinymce.init({
+				selector: '#mytextarea'
+			});
+		</script>
+
+
+		
+
+
+
+	</section>
+
+</body>
+
+</html>
